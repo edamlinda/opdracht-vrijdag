@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("/stuff/fish.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(238, 238, 238, 0.81) !important;
+  background-image: url("/stuff/star.gif");
+  background-blend-mode: color;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+ 
+.sidebar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 100%;
+  background-color:hsla(0, 0%, 100%, 0.493);
+}
+
+
+​
+input[type=text],
+select,
+textarea {
+  width: 100%;
+  padding: 20px;
+    border: 5px solid #ccc;
+        border-radius: 50px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+    
+    }
+​
+    input[type=email],
+    select,
+    textarea {
+        width: 100%;
+        padding: 20px;
+        border: 5px solid #ccc;
+        border-radius: 50px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+    }
+​
+    input[type=submit] {
+        background-color:rebeccapurple;
+        color: black;
+        padding: 50px;
+        border:black 5px solid;
+        border-radius: 50%;
+        cursor: pointer;
+    font-size: xx-large;
+    }
+​
+    input[type=submit]:hover {
+        background-color:darkmagenta
+        
+    }
+​
+    .container {
+        border-radius: 50px;
+        background-color:violet;
+        padding: 20px;
+    }
+
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+  }
+}
+</style>
+</head>
+<body>
+    
+  <div class="sidebar">
+   <a class="active" href="#home">Home</a>
+   <a href="#cat">Cats</a>
+   <a href="#dog">Dogs</a>
+   <a href="#contact">Contact</a>
+  </div>
+
+  <div class="content">
+    <audio controls loop>
+      <source src="/stuff/11.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
+    <div class="block">
+      <h1>Welkom to the rice fields</h1>
+
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
+      standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+      It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
+    </div>
+  </div>
+  <footer>
+      <h1>Contact Form</h1>
+      ​
+          <div class="content"class="container">
+              <form>
+                  <label for="fname"><b>FIRST NAME</b></label>
+                  <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      ​
+                  <label for="lname"><b>LAST NAME</b></label>
+                  <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      ​
+                  <label for="email"><b>EMAIL</b></label>
+                  <input type="email" id="email" name="email" placeholder="email..">
+                  <label for="country"><b>COUNTRY</b></label>
+                  <select id="country" name="country">
+                      <option value="australia">Australia</option>
+                      <option value="canada">Canada</option>
+                      <option value="usa">USA</option>
+                  </select>
+      ​
+                  <label for="subject"><b>SUBJECT</b></label>
+                  <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      ​
+                  <input type="submit" value="SUBMIT">
+              </form>
+          </div>
+  </footer>
+</body>
+</html>
