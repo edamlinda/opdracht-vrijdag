@@ -30,13 +30,9 @@ body {
   text-decoration: none;
 }
  
-.sidebar a.active {
-  background-color: #4CAF50;
-  color: white;
-}
 
 .sidebar a:hover:not(.active) {
-  background-color: #555;
+  background-color: fuchsia;
   color: white;
 }
 
@@ -47,55 +43,85 @@ div.content {
   background-color:hsla(0, 0%, 100%, 0.493);
 }
 
+.scrolling-wrapper {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  position: relative;
+  bottom: 10px;
+  left: -216px;
+}
 
-​
+.card {
+  display: inline-block;
+}
+
+/* Doggo */
+
+img[src*=dog]{
+  position: relative;
+  width: 100%;
+  left: auto;
+  /* opacity: 0.45;
+  z-index: -10; */
+}
+img:hover {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+.meh .btn{
+  position: absolute;
+  top: 30px;
+  left: 51000px;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
 input[type=text],
 select,
 textarea {
   width: 100%;
   padding: 20px;
-    border: 5px solid #ccc;
-        border-radius: 50px;
-        box-sizing: border-box;
-        margin-top: 6px;
-        margin-bottom: 16px;
-        resize: vertical;
-    
-    }
+  border: 5px solid #ccc;
+  border-radius: 50px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
 ​
-    input[type=email],
-    select,
-    textarea {
-        width: 100%;
-        padding: 20px;
-        border: 5px solid #ccc;
-        border-radius: 50px;
-        box-sizing: border-box;
-        margin-top: 6px;
-        margin-bottom: 16px;
-        resize: vertical;
-    }
+input[type=email],
+select,
+textarea {
+  width: 100%;
+  padding: 20px;
+  border: 5px solid #ccc;
+  border-radius: 50px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
 ​
-    input[type=submit] {
-        background-color:rebeccapurple;
-        color: black;
-        padding: 50px;
-        border:black 5px solid;
-        border-radius: 50%;
-        cursor: pointer;
-    font-size: xx-large;
-    }
+input[type=submit] {
+  background-color:rebeccapurple;
+  color: black;
+  padding: 50px;
+  border:black 5px solid;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: xx-large;
+}
 ​
-    input[type=submit]:hover {
-        background-color:darkmagenta
-        
-    }
+input[type=submit]:hover {
+  background-color:darkmagenta
+}
 ​
-    .container {
-        border-radius: 50px;
-        background-color:violet;
-        padding: 20px;
-    }
+.container {
+  border-radius: 50px;
+  background-color:violet;
+  padding: 20px;
+}
 
 
 @media screen and (max-width: 700px) {
@@ -117,10 +143,10 @@ textarea {
 <body>
     
   <div class="sidebar">
-   <a class="active" href="#home">Home</a>
+   <a href="#home">Home</a>
    <a href="#cat">Cats</a>
-   <a href="#dog">Dogs</a>
-   <a href="#contact">Contact</a>
+   <a href="#dog">Dog</a>
+   <a href="#my_footer">Contact</a>
   </div>
 
   <div class="content">
@@ -129,40 +155,66 @@ textarea {
       Your browser does not support the audio element.
     </audio>
 
-    <div class="block">
+    <div id="home" class="block">
       <h1>Welkom to the rice fields</h1>
 
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
-      standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-      It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
+      We deal in cat's and dogs and bunny's and cocaine
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+        when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, 
+        but also the leap into electronic typesetting, 
+        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+        and more recently with desktop publishing software 
+        like Aldus PageMaker including versions of Lorem Ipsum.
+      </p>
+      
+    </div>
+ 
+    <div id="cat" class=" content scrolling-wrapper">
+      <div class="card"><h2>Max</h2><p>sale with a side of pussy</p><img src="/stuff/max.jpg" width="400" height="242" alt="max"></div>
+      <div class="card"><h2>Bob</h2><p>Some glow in the dark green</p><img src="/stuff/glow.png" width="400" height="242" alt="green"></div>
+      <div class="card"><h2>Kiwi</h2><p>Kiwi here some nice hi with a tint of space</p><img src="/stuff/floof.jpg" width="400" height="242" alt="kwiw"></div>
+      <div class="card"><h2>Lemon</h2><p>Lemon is a preety cat off the face of this earth</p><img src="/stuff/raa.png" width="400" height="242" alt="lemon"></div>
+      <div class="card"><h2>Falafel</h2><p>The cutest cat of all</p><img src="/stuff/durr.jpg" width="400" height="242" alt="lemon"></div>
     </div>
   </div>
+
+  <div id="dog" class="content">
+    <h2>Doggo</h2>
+    
+      <img class="meh"src="/stuff/dog.jpg">
+    
+      <audio id="sound1" src="/stuff/15.mp3" preload="auto"></audio>
+      <button class="btn" onclick="document.getElementById('sound1').play();">Stonks
+      </button>
+  </div>
   <footer>
-      <h1>Contact Form</h1>
+    
       ​
-          <div class="content"class="container">
-              <form>
-                  <label for="fname"><b>FIRST NAME</b></label>
-                  <input type="text" id="fname" name="firstname" placeholder="Your name..">
+    <div class="content"class="container">
+      <form>
+          <h1 id="my_footer">Contact Form</h1>
+      <label for="fname"><b>FIRST NAME</b></label>
+      <input type="text" id="fname" name="firstname" placeholder="Your name..">
       ​
-                  <label for="lname"><b>LAST NAME</b></label>
-                  <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      <label for="lname"><b>LAST NAME</b></label>
+      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
       ​
-                  <label for="email"><b>EMAIL</b></label>
-                  <input type="email" id="email" name="email" placeholder="email..">
-                  <label for="country"><b>COUNTRY</b></label>
-                  <select id="country" name="country">
-                      <option value="australia">Australia</option>
-                      <option value="canada">Canada</option>
-                      <option value="usa">USA</option>
-                  </select>
+      <label for="email"><b>EMAIL</b></label>
+      <input type="email" id="email" name="email" placeholder="email..">
+      <label for="country"><b>COUNTRY</b></label>
+      <select id="country" name="country">
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+      </select>
       ​
-                  <label for="subject"><b>SUBJECT</b></label>
-                  <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      <label for="subject"><b>SUBJECT</b></label>
+      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
       ​
-                  <input type="submit" value="SUBMIT">
-              </form>
-          </div>
+        <input type="submit" value="SUBMIT">
+        </form>
+    </div>
   </footer>
 </body>
 </html>
