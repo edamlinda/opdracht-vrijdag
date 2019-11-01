@@ -136,8 +136,31 @@ input[type=submit]:hover {
 @media screen and (max-width: 400px) {
   .sidebar a {
     text-align: center;
+  
   }
 }
+
+/* .footer {display: flex;
+justify-content: space-evenly;} */
+.underl {text-decoration: underline;}
+
+::placeholder {background-color: rgba(238, 238, 238, 0.81);
+padding: 3px;
+font-weight: bold;}
+
+
+.name input {width: 250px;
+display: flex;
+border-radius: 50px;
+padding: 20px;
+background-color: rgba(65, 96, 165, 0.6);
+border: 5px solid #ccc;
+}
+
+input[type=submit]{
+  background-color: rgba(65, 96, 165, 0.6);
+  font-weight: bold;}
+
 </style>
 </head>
 <body>
@@ -189,32 +212,34 @@ input[type=submit]:hover {
       </button>
   </div>
   <footer>
-    
+     
       ​
-    <div class="content"class="container">
-      <form>
-          <h1 id="my_footer">Contact Form</h1>
-      <label for="fname"><b>FIRST NAME</b></label>
-      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+          <div class="content"class="container">
+
+              <h1 class="underl">Contact Form</h1>
+              <form >
+                <div class="name">  <label for="fname"><b>FIRST NAME</b></label><br><br>
+                  <input type="text" id="fname" name="firstname" placeholder="Your name.."><br><br>
       ​
-      <label for="lname"><b>LAST NAME</b></label>
-      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                  <label for="lname"><b>LAST NAME</b></label><br><br>
+                  <input type="text" id="lname" name="lastname" placeholder="Your last name.."><br><br>
       ​
-      <label for="email"><b>EMAIL</b></label>
-      <input type="email" id="email" name="email" placeholder="email..">
-      <label for="country"><b>COUNTRY</b></label>
-      <select id="country" name="country">
-      <option value="australia">Australia</option>
-      <option value="canada">Canada</option>
-      <option value="usa">USA</option>
-      </select>
+                  <label for="email"><b>EMAIL</b></label><br><br>
+                  <input type="email" id="email" name="email" placeholder="email.."><br><br>
+                </div>
+                  <label for="country"><b>COUNTRY</b></label><br><br>
+                  <select id="country" name="country">
+                      <option value="australia">Australia</option>
+                      <option value="canada">Canada</option>
+                      <option value="usa">USA</option>
+                  </select>
       ​
       <label for="subject"><b>SUBJECT</b></label>
       <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
       ​
-        <input type="submit" value="SUBMIT">
-        </form>
-    </div>
+                  <input type="submit" value="SUBMIT"><br><br>
+              </form>
+          </div>
   </footer>
 </body>
 </html>
