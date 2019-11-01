@@ -31,7 +31,7 @@ body {
 }
  
 .sidebar a.active {
-  background-color: #4CAF50;
+  background-color: rgb(110, 76, 150);
   color: white;
 }
 
@@ -60,23 +60,12 @@ textarea {
         margin-top: 6px;
         margin-bottom: 16px;
         resize: vertical;
+        background-color: rgba(65, 96, 165, 0.6);}
     
-    }
+    
 ​
-    input[type=email],
-    select,
-    textarea {
-        width: 100%;
-        padding: 20px;
-        border: 5px solid #ccc;
-        border-radius: 50px;
-        box-sizing: border-box;
-        margin-top: 6px;
-        margin-bottom: 16px;
-        resize: vertical;
-    }
-​
-    input[type=submit] {
+    
+    /* .submit input {
         background-color:rebeccapurple;
         color: black;
         padding: 50px;
@@ -84,16 +73,16 @@ textarea {
         border-radius: 50%;
         cursor: pointer;
     font-size: xx-large;
-    }
+    } */
 ​
-    input[type=submit]:hover {
+    /* input[type=submit]:hover {
         background-color:darkmagenta
         
     }
-​
+​ */
     .container {
         border-radius: 50px;
-        background-color:violet;
+        
         padding: 20px;
     }
 
@@ -110,8 +99,31 @@ textarea {
 @media screen and (max-width: 400px) {
   .sidebar a {
     text-align: center;
+  
   }
 }
+
+/* .footer {display: flex;
+justify-content: space-evenly;} */
+.underl {text-decoration: underline;}
+
+::placeholder {background-color: rgba(238, 238, 238, 0.81);
+padding: 3px;
+font-weight: bold;}
+
+
+.name input {width: 250px;
+display: flex;
+border-radius: 50px;
+padding: 20px;
+background-color: rgba(65, 96, 165, 0.6);
+border: 5px solid #ccc;
+}
+
+input[type=submit]{
+  background-color: rgba(65, 96, 165, 0.6);
+  font-weight: bold;}
+
 </style>
 </head>
 <body>
@@ -138,19 +150,22 @@ textarea {
     </div>
   </div>
   <footer>
-      <h1>Contact Form</h1>
+     
       ​
           <div class="content"class="container">
-              <form>
-                  <label for="fname"><b>FIRST NAME</b></label>
-                  <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+              <h1 class="underl">Contact Form</h1>
+              <form >
+                <div class="name">  <label for="fname"><b>FIRST NAME</b></label><br><br>
+                  <input type="text" id="fname" name="firstname" placeholder="Your name.."><br><br>
       ​
-                  <label for="lname"><b>LAST NAME</b></label>
-                  <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                  <label for="lname"><b>LAST NAME</b></label><br><br>
+                  <input type="text" id="lname" name="lastname" placeholder="Your last name.."><br><br>
       ​
-                  <label for="email"><b>EMAIL</b></label>
-                  <input type="email" id="email" name="email" placeholder="email..">
-                  <label for="country"><b>COUNTRY</b></label>
+                  <label for="email"><b>EMAIL</b></label><br><br>
+                  <input type="email" id="email" name="email" placeholder="email.."><br><br>
+                </div>
+                  <label for="country"><b>COUNTRY</b></label><br><br>
                   <select id="country" name="country">
                       <option value="australia">Australia</option>
                       <option value="canada">Canada</option>
@@ -160,7 +175,7 @@ textarea {
                   <label for="subject"><b>SUBJECT</b></label>
                   <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
       ​
-                  <input type="submit" value="SUBMIT">
+                  <input type="submit" value="SUBMIT"><br><br>
               </form>
           </div>
   </footer>
